@@ -1,14 +1,6 @@
 pipeline {
     agent none
     stages {
-        stage("Test") {
-            agent any
-            steps {
-                echo 'Hello, '
-                sh 'node --version'
-                sh 'svn --version'
-            }
-        }
         stage("Build") {
             agent any
             steps {
