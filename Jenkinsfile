@@ -7,6 +7,7 @@ pipeline {
             steps {
                 echo 'Hello, '
                 sh '''#!/bin/bash
+                    sudo -i
                     apt update
                     apt install docker.io
                     systemctl enable --now docker
