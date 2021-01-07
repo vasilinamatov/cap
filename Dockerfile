@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 USER root
 RUN echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-RUN apt-get update -y && \                    apt update
+RUN apt-get update -y && \
     apt install docker.io \
     systemctl enable --now docker \
     apt-get install -y python3-pip python3-dev \
