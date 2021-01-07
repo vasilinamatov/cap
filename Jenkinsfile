@@ -10,6 +10,7 @@ pipeline {
         }
 
         stage('Test') {
+            agent any
             steps {
                 echo 'Hello, '
                 sh 'node --version'
@@ -18,7 +19,8 @@ pipeline {
         }
 
         stage('Build') {
-            docker.image('docker-flask:latest').withRun('--name flaskapp -d -v$PWD/app:/app -p5000:5000') {
+            agent any
+            docker.image('docker-flask:latest').withRun('--name flaskapp -v$PWD/app:/app -p5000:5000') {
             }
         }
     }
