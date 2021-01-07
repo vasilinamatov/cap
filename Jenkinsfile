@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'docker-flask:latest'
-        }
-    }
+    agent none
     stages {
         stage("Build") {
             agent any
