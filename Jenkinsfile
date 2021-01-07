@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent { dockerfile true }
     stages {
 
         stage("Fix the permission issue") {
@@ -9,11 +9,16 @@ pipeline {
             }
         }
 
-        stage ('Build') {
-            agent any
-
+        stage('Test') {
             steps {
                 echo 'Hello, '
+                sh 'node --version'
+                sh 'svn --version'
+            }
+        }
+
+        stage('Build') {
+            steps {
                 sh '''#!/bin/bash
                     apt update
                     apt install docker.io
