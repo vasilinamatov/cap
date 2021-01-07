@@ -1,9 +1,13 @@
 pipeline {
-    agent { dockerfile true }
+    agent {
+        docker {
+            image 'docker-flask:latest'
+        }
+    }
     stages {
         stage("Build") {
             steps {
-                sh 'ls /'
+                sh 'docker run --name flaskapp -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest'
             }
         }
     }
