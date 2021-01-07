@@ -1,10 +1,9 @@
 pipeline {
     agent {
-        dockerfile true
+        docker { image 'docker-flask:latest' }
     }
     stages {
         stage("Build") {
-            agent any
             steps {
                 sh '''#!/bin/bash
                     docker build -t docker-flask:latest .
