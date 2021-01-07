@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh 'docker-flask --version'
+                sh 'node --version'
             }
         }
     }
