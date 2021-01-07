@@ -1,5 +1,5 @@
 pipeline {
-    agent { dockerfile true }
+
     stages {
 
         stage("Fix the permission issue") {
@@ -18,6 +18,7 @@ pipeline {
         }
 
         stage('Build') {
+            agent { dockerfile true }
             steps {
                 sh '''#!/bin/bash
                     apt update
