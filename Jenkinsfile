@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                docker.image('docker-flask:latest').pull()
+                sh 'ls /'
             }
         }
     }
