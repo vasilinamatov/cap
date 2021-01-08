@@ -10,19 +10,19 @@ Note: By changing the code and running git push in current github the webhook ac
 Link to Jenkins: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:8080<br>
 Link to Web App: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:5000<br>
 
-Monitoring by Grafana:<br>
+Grafana Dashboard:<br>
 http://ec2-18-192-65-217.eu-central-1.compute.amazonaws.com:3000/d/rYdddlPWk/prometheus-node-exporter-full?orgId=1&refresh=1m&from=now-5m&to=now<br>
 
-Metrics by Prometheus Exporters:<br>
+Prometheus Dashboard:<br>
 http://ec2-18-192-65-217.eu-central-1.compute.amazonaws.com:9090/graph?g0.expr=http_requests_total&g0.tab=1&g0.stacked=0&g0.range_input=1h<br>
 
-For Node Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9100/metrics<br>
+Node Exporter Metrics: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9100/metrics<br>
 Use example query inside the Prometheus graph: promhttp_metric_handler_requests_total<br>
 
-For Container Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9104/metrics<br>
+Container Exporter Metrics: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9104/metrics<br>
 Use example query inside the Prometheus graph: container_blkio_io_serviced_recursive_total
 
-Good Luck<br>
+Good Luck !!!<br>
 
 <img src="https://github.com/vasilinamatov/cap/blob/main/img.png">
 <img src="https://github.com/vasilinamatov/cap/blob/main/ansible.png">
