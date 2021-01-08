@@ -23,6 +23,8 @@ Monitoring by Grafana:<br>
 Grafana: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:3000/d/rYdddlPWk/prometheus-node-exporter-full?orgId=1&refresh=1m<br>
 
 Good Luck<br>
-
-<img src="https://github.com/vasilinamatov/cap/blob/main/img.png style="vertical-align:middle;margin:0px 50px">
+<style>
+div {text-align: center;}
+</style>
+<div><img src="https://github.com/vasilinamatov/cap/blob/main/img.png"></div>
  
