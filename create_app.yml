@@ -1,0 +1,9 @@
+- hosts: ansible-server
+  become: true
+
+  tasks:
+    - name: create docker image using Docker file
+      command: docker build -t docker-flask:latest .
+
+    - name: run docker with the app
+      command: docker run --name flaskapp -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest
