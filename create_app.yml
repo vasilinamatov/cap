@@ -37,6 +37,9 @@
 
     - name: create docker image
       shell: docker build -t docker-flask:latest .
+
+    - name: docker image list
+      shell: docker image list
       register: docker_image_list_output
 
     - name: docker image list
@@ -45,6 +48,9 @@
 
     - name: run docker with the app
       shell: docker run --name flaskapp-{{ version }} -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest
+
+    - name: docker list
+      shell: docker ps --all
       register: docker_list_output
 
     - name: docker list
