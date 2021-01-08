@@ -34,10 +34,7 @@
         state: absent
 
     - name: create docker image
-      docker_container:
-        name: flaskapp
-        image: docker-flask:latest
-        state: present
+      shell: docker build -t docker-flask:latest .
 
     - name: run docker with the app
       shell: docker run --name flaskapp -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest
