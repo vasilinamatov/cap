@@ -2,7 +2,13 @@
   become: true
 
   tasks:
-    - name: create docker image using Docker file
+
+    - name: copy Dockerfile
+      copy:
+        scr: Dockerfile
+        dest: /root/Dockerfile
+
+    - name: create docker image using Dockerfile
       command: docker build -t docker-flask:latest .
 
     - name: run docker with the app
