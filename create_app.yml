@@ -8,12 +8,37 @@
         src: Dockerfile
         dest: /root/Dockerfile
 
-    - name: create docker image using Dockerfile
-      command: docker stop flaskapp;docker rm flaskapp
+    - name: create app dir
+      file:
+        path: /root/app
+        state: directory
 
-    - name: create docker image using Dockerfile
-      command: docker build -t docker-flask:latest .
+    - name: copy app/app.py
+      copy:
+        src: app/app.py
+        dest: /root/app/app.py
+
+    - name: copy requirements.txt
+      copy:
+        src: requirements.txt
+        dest: /root/requirements.txt
+
+    - name: stop a container
+      docker_container:
+        name: flaskapp
+        state: stopped
+
+    - name: remove a container
+      docker_container:
+        name: flaskapp
+        state: absent
+
+    - name: create docker image
+      docker_container:
+        name: flaskapp
+        image: docker-flask:latest
+        state: present
 
     - name: run docker with the app
-      command: docker run --name flaskapp -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest
+      shell: docker run --name flaskapp -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest
 
