@@ -25,5 +25,7 @@ Use example query inside the Prometheus graph: container_blkio_io_serviced_recur
 Good Luck<br>
 
 <img src="https://github.com/vasilinamatov/cap/blob/main/img.png">
+<img src="https://github.com/vasilinamatov/cap/blob/main/ansible.png">
+<img src="https://github.com/vasilinamatov/cap/blob/main/mon.png">
  
  
