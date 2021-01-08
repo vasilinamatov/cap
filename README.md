@@ -24,5 +24,5 @@ Grafana: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:3000/d/rYdd
 
 Good Luck<br>
 
-<img src="https://github.com/vasilinamatov/cap/blob/main/img.png">
+<img src="https://github.com/vasilinamatov/cap/blob/main/img.png align="center">
  
