@@ -10,7 +10,7 @@ Note: By changing the code and running git push in current github the webhook ac
 Link to Jenkins: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:8080<br>
 Link to Web App: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:5000<br>
 
-Metrics by Prometheus Exporters:
+Metrics by Prometheus Exporters:<br>
 Prometheus: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:9090/graph<br>
 
 For Node Exporter: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9100<br>
@@ -19,10 +19,10 @@ Use example query inside the Prometheus graph: promhttp_metric_handler_requests_
 For Container Exporter: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9104<br>
 Use example query inside the Prometheus graph: container_blkio_io_serviced_recursive_total
 
-Monitoring by Grafana:
+Monitoring by Grafana:<br>
 Grafana: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:3000/d/rYdddlPWk/prometheus-node-exporter-full?orgId=1&refresh=1m<br>
 
 Good Luck<br>
 
-<img src="https://github.com/vasilinamatov/cap/img.png">
+<img src="https://github.com/vasilinamatov/cap/blob/main/img.png">
  
