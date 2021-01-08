@@ -22,12 +22,12 @@
 
     - name: copy app/app.py
       copy:
-        src: app/app.py
+        src: releases/{{ Release }}/app.py
         dest: /root/app/app.py
 
     - name: copy requirements.txt
       copy:
-        src: requirements.txt
+        src: releases/{{ Release }}/requirements.txt
         dest: /root/requirements.txt
 
     - name: remove a container
@@ -37,7 +37,16 @@
 
     - name: create docker image
       shell: docker build -t docker-flask:latest .
+      register: docker_image_list_output
+
+    - name: docker image list
+      debug:
+        msg: '{{ docker_image_list_output.stout_lines }}'
 
     - name: run docker with the app
       shell: docker run --name flaskapp-{{ version }} -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest
+      register: docker_list_output
 
+    - name: docker list
+      debug:
+        msg: '{{ docker_list_output.stout_lines }}'
