@@ -5,10 +5,14 @@
 
   tasks:
 
-    - name: load vars
+    - name: choose release
       include_vars: '{{ item }}'
       with_items:
         - choose_release.yml
+
+    - name: load vars of release
+      include_vars: '{{ item }}'
+      with_items:
         - releases/{{ release }}/all.yml
 
     - name: copy Dockerfile
