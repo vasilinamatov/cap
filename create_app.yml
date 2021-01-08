@@ -20,9 +20,9 @@
         path: /root/app
         state: directory
 
-    - name: copy app/app.py
-      copy:
-        src: releases/{{ Release }}/app.py
+    - name: generate jinja2 app/app.py
+      template:
+        src: releases/{{ Release }}/app.py.j2
         dest: /root/app/app.py
 
     - name: copy requirements.txt
