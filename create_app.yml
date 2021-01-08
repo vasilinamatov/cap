@@ -8,7 +8,8 @@
     - name: load vars
       include_vars: '{{ item }}'
       with_items:
-        - releases/{{ Release }}/all.yml
+        - choose_release.yml
+        - releases/{{ release }}/all.yml
 
     - name: copy Dockerfile
       copy:
@@ -22,12 +23,12 @@
 
     - name: generate jinja2 app/app.py
       template:
-        src: releases/{{ Release }}/app.py.j2
+        src: releases/{{ release }}/app.py.j2
         dest: /root/app/app.py
 
     - name: copy requirements.txt
       copy:
-        src: releases/{{ Release }}/requirements.txt
+        src: releases/{{ release }}/requirements.txt
         dest: /root/requirements.txt
 
     - name: stop flaskapp containers
