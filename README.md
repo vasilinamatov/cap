@@ -7,8 +7,8 @@ Two Releases with different Versions of the app are available. To switch between
 
 Note: By changing the code and running git push in current github the webhook activates the Jenkins CI/CD Pipeline. Jenkins is running ansible code and placing the web app inside the docker and then exposing the port 5000 to the world<br>
 
-Link to Jenkins: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:8080<br>
-Link to Web App: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:5000<br>
+Link to Jenkins: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:8080<br>
+Link to Web App: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:5000<br>
 
 Monitoring by Grafana:<br>
 http://ec2-18-192-65-217.eu-central-1.compute.amazonaws.com:3000/d/rYdddlPWk/prometheus-node-exporter-full?orgId=1&refresh=1m&from=now-5m&to=now<br>
