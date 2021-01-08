@@ -11,15 +11,18 @@ Link to Jenkins: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:80
 Link to Web App: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:5000<br>
 
 Metrics by Prometheus Exporters:
-
-Prometheus: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9090<br>
+Prometheus: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:9090/graph<br>
 
 For Node Exporter: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9100<br>
-Use example query inside the graph: promhttp_metric_handler_requests_total<br>
+Use example query inside the Prometheus graph: promhttp_metric_handler_requests_total<br>
 
 For Container Exporter: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9104<br>
-Use example query inside the graph: container_blkio_io_serviced_recursive_total
+Use example query inside the Prometheus graph: container_blkio_io_serviced_recursive_total
+
+Monitoring by Grafana:
+Grafana: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:3000/d/rYdddlPWk/prometheus-node-exporter-full?orgId=1&refresh=1m<br>
 
 Good Luck<br>
 
+<img src="https://github.com/vasilinamatov/cap/img.png">
  
