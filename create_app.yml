@@ -32,9 +32,11 @@
 
     - name: stop flaskapp containers
       shell: docker stop $(docker ps --all|grep flaskapp | cut -d ' ' -f1)
+      ignore_errors: yes
 
     - name: remove flaskapp containers
       shell: docker rm $(docker ps --all|grep flaskapp | cut -d ' ' -f1)
+      ignore_errors: yes
 
 #    - name: remove a container
 #      docker_container:
