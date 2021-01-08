@@ -41,7 +41,7 @@
 
     - name: docker image list
       debug:
-        msg: '{{ docker_image_list_output.stout_lines }}'
+        msg: '{{ docker_image_list_output.stdout_lines }}'
 
     - name: run docker with the app
       shell: docker run --name flaskapp-{{ version }} -d -v $PWD/app:/app -p 5000:5000 docker-flask:latest
@@ -49,4 +49,4 @@
 
     - name: docker list
       debug:
-        msg: '{{ docker_list_output.stout_lines }}'
+        msg: '{{ docker_list_output.stdout_lines }}'
