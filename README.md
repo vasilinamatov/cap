@@ -20,7 +20,7 @@ For Container Exporter: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws
 Use example query inside the Prometheus graph: container_blkio_io_serviced_recursive_total
 
 Monitoring by Grafana:<br>
-Grafana: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:3000/d/rYdddlPWk/prometheus-node-exporter-full?orgId=1&refresh=1m<br>
+http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:3000
 
 Good Luck<br>
 
