@@ -5,10 +5,10 @@
 
   tasks:
 
-    - name: choose release
+    - name: active release
       include_vars: '{{ item }}'
       with_items:
-        - choose_release.yml
+        - active_release.yml
 
     - name: load vars of release
       include_vars: '{{ item }}'
