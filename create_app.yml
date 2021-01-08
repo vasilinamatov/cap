@@ -23,10 +23,10 @@
         src: requirements.txt
         dest: /root/requirements.txt
 
-    - name: stop a container
-      docker_container:
-        name: flaskapp
-        state: stopped
+#    - name: stop a container
+#      docker_container:
+#        name: flaskapp
+#        state: stopped
 
     - name: remove a container
       docker_container:
