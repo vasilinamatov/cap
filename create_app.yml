@@ -67,3 +67,4 @@
     - name: docker list
       debug:
         msg: '{{ docker_list_output.stdout_lines }}'
+
