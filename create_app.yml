@@ -43,11 +43,11 @@
 #        name: flaskapp-{{ version }}
 #        state: absent
 
-    - name: docker image prune
-      shell: docker image prune -f
-
     - name: create docker image
       shell: docker build -t docker-flask:latest .
+
+    - name: docker image prune
+      shell: docker image prune -f
 
     - name: docker image list
       shell: docker image list
