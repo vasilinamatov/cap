@@ -30,10 +30,16 @@
         src: releases/{{ Release }}/requirements.txt
         dest: /root/requirements.txt
 
-    - name: remove a container
-      docker_container:
-        name: flaskapp-{{ version }}
-        state: absent
+    - name: stop flaskapp containers
+      shell: docker container stop $(docker container ls|grep flaskapp | cut -d ' ' -f1)
+
+    - name: remove flaskapp containers
+      shell: docker container rm $(docker container ls|grep flaskapp | cut -d ' ' -f1)
+
+#    - name: remove a container
+#      docker_container:
+#        name: flaskapp-{{ version }}
+#        state: absent
 
     - name: docker image prune
       shell: docker image prune -f
