@@ -9,6 +9,9 @@
         dest: /root/Dockerfile
 
     - name: create docker image using Dockerfile
+      command: docker stop flaskapp;docker rm flaskapp
+
+    - name: create docker image using Dockerfile
       command: docker build -t docker-flask:latest .
 
     - name: run docker with the app
