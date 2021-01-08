@@ -1,0 +1,16 @@
+---
+
+- hosts: ansible-server
+  become: true
+
+  tasks:
+
+    - name: copy prometheus.yml
+      copy:
+        src: prometheus.yml
+        dest: /etc/prometheus/prometheus.yml
+
+    - name: copy prometheus.sh
+      copy:
+        src: prometheus.sh
+        dest: /root/prometheus.sh
