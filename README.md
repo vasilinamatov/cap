@@ -16,10 +16,10 @@ http://ec2-18-192-65-217.eu-central-1.compute.amazonaws.com:3000/d/rYdddlPWk/pro
 Metrics by Prometheus Exporters:<br>
 http://ec2-18-192-65-217.eu-central-1.compute.amazonaws.com:9090/graph?g0.expr=http_requests_total&g0.tab=1&g0.stacked=0&g0.range_input=1h<br>
 
-For Node Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9100<br>
+For Node Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9100/metrics<br>
 Use example query inside the Prometheus graph: promhttp_metric_handler_requests_total<br>
 
-For Container Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9104<br>
+For Container Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9104/metrics<br>
 Use example query inside the Prometheus graph: container_blkio_io_serviced_recursive_total
 
 Good Luck<br>
