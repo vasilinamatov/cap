@@ -13,10 +13,10 @@ Link to Web App: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:50
 Metrics by Prometheus Exporters:<br>
 Prometheus: http://ec2-18-197-176-81.eu-central-1.compute.amazonaws.com:9090/graph<br>
 
-For Node Exporter: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9100<br>
+For Node Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9100<br>
 Use example query inside the Prometheus graph: promhttp_metric_handler_requests_total<br>
 
-For Container Exporter: http://ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9104<br>
+For Container Exporter: http://ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9104<br>
 Use example query inside the Prometheus graph: container_blkio_io_serviced_recursive_total
 
 Monitoring by Grafana:<br>

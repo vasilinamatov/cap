@@ -8,8 +8,8 @@ scrape_configs:
   - job_name: 'node'
     scrape_interval: 5s
     static_configs:
-    - targets: ['ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9100']
+    - targets: ['ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9100']
   - job_name: 'container'
     scrape_interval: 5s
     static_configs:
-    - targets: ['ec2-35-157-131-255.eu-central-1.compute.amazonaws.com:9104']
+    - targets: ['ec2-18-195-150-173.eu-central-1.compute.amazonaws.com:9104']
