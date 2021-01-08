@@ -31,10 +31,10 @@
         dest: /root/requirements.txt
 
     - name: stop flaskapp containers
-      shell: docker container stop $(docker container ls|grep flaskapp | cut -d ' ' -f1)
+      shell: docker stop $(docker ps --all|grep flaskapp | cut -d ' ' -f1)
 
     - name: remove flaskapp containers
-      shell: docker container rm $(docker container ls|grep flaskapp | cut -d ' ' -f1)
+      shell: docker rm $(docker ps --all|grep flaskapp | cut -d ' ' -f1)
 
 #    - name: remove a container
 #      docker_container:
